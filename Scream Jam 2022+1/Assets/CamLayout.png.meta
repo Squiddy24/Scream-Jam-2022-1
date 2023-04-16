@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: f5d73ff0e122a4b11b8e4ad4e7380d8d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3085782088997561710
+    second: CamLayout_0
+  - first:
+      213: 4727565116641163220
+    second: CamLayout_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +107,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CamLayout_0
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 2409
+        width: 327
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a990b0a891d25d0800000000000000
+      internalID: -3085782088997561710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CamLayout_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 651
+        width: 1962
+        height: 1548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7bce50d6fab9140800000000000000
+      internalID: 4727565116641163220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
