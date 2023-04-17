@@ -10,6 +10,7 @@ public class CameraCode : MonoBehaviour
     public Transform Room2;
     public LogicCode logic;
     public bool CamOn;
+    public int LastCam;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,10 +42,13 @@ public class CameraCode : MonoBehaviour
     public void GoToRoom1()
     {
         transform.position = Room1.position;
+        LastCam = 1
     }
     public void GoToRoom2()
     {
         transform.position = Room2.position;
+        LastCam = 2
+
     }
     public void LeaveCams()
     {
