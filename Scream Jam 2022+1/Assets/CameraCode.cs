@@ -9,6 +9,7 @@ public class CameraCode : MonoBehaviour
     public Transform Room1;
     public Transform Room2;
     public LogicCode logic;
+    public bool CamOn;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +19,24 @@ public class CameraCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (CamOn == true)
+            {
+                LeaveCams();
+            }
+            else
+            {
+                entercams();
+            }
+        }
     }
+
     public void entercams()
     {   
             transform.position = Office.position;
-            logic.CamsOn();      
+            logic.CamsOn();
+        CamOn = true;
     }
     public void GoToRoom1()
     {
@@ -37,6 +50,9 @@ public class CameraCode : MonoBehaviour
     {
         transform.position = Office.position;
         logic.LeaveCams();
+        CamOn = false;
+
+
     }
 
 }
