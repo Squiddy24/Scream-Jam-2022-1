@@ -5,26 +5,30 @@ using UnityEngine;
 public class Antlogic : MonoBehaviour
 {
     public int AntDifficulty = 5;
-    public float timeLeft = 30.0f;
+    public float timeLeft = 5f;
     public int Antpositon = 1;
-    public int randomNumber;
     public GameObject Antposition1;
     public GameObject Antposition2;
     public GameObject Antposition3;
+    public LogicCode logic;
     void Start()
     {
-        
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
     }
     void Update()
     {
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0)
         {
-            int randomnumber = Random.Range(0, 20);
-            if (randomNumber <= AntDifficulty)
+            int randomNumber = Random.Range(1, 22);
+            if (AntDifficulty >= randomNumber)
             {
                 Antpositon = Antpositon + 1;
-                timeLeft = 30;
+                timeLeft = 5;
+            }
+            else
+            {
+                timeLeft = 5;
             }
         }
         if (Antpositon == 1)
@@ -37,12 +41,24 @@ public class Antlogic : MonoBehaviour
             Antposition2.SetActive(false);
             Antposition1.SetActive(true);
         }
-        if (Antpositon >= 2)
+        if (Antpositon == 2)
         {
             Antposition2.SetActive(false);
             Antposition1.SetActive(false);
-            Antposition3.SetActive(true);
         }
-
+        if (Antpositon >= 2)
+        {
+            logic.gameover();
+        }
+    }
+    public void sprayed()
+    {
+        if (Antpositon == 2)
+        {
+            Antpositon = 0;
+            Antposition2.SetActive(false);
+            Antposition1.SetActive(true);
+            Antposition3.SetActive(false);
+        }
     }
 }

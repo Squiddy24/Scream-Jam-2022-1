@@ -9,11 +9,14 @@ public class CameraCode : MonoBehaviour
     public Transform Room1;
     public Transform Room2;
     public LogicCode logic;
+    public Antlogic antlogic;
     public bool CamOn;
+    public int spraysLeft = 3;
     // Start is called before the first frame update
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
+        antlogic = GameObject.FindGameObjectWithTag("Ant").GetComponent<Antlogic>();
     }
 
     // Update is called once per frame
@@ -24,6 +27,7 @@ public class CameraCode : MonoBehaviour
             if (CamOn == true)
             {
                 LeaveCams();
+                transform.position = Room1.position;
             }
             else
             {
@@ -33,9 +37,9 @@ public class CameraCode : MonoBehaviour
     }
 
     public void entercams()
-    {   
-            transform.position = Office.position;
-            logic.CamsOn();
+    {
+        transform.position = Room1.position;
+        logic.CamsOn();
         CamOn = true;
     }
     public void GoToRoom1()
@@ -51,8 +55,16 @@ public class CameraCode : MonoBehaviour
         transform.position = Office.position;
         logic.LeaveCams();
         CamOn = false;
-
+    }
+    public void Bugspray()
+    {
+        if (spraysLeft == 0)
+        {
+            antlogic.sprayed();
+            spraysLeft = spraysLeft - 1;
+        }
 
     }
+
 
 }
