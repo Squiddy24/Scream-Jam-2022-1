@@ -7958,9 +7958,12 @@ MonoBehaviour:
   Antposition1: {fileID: 1150405180}
   Antposition2: {fileID: 1507862626}
   Antposition3: {fileID: 994282799}
+<<<<<<< Updated upstream
   Antposition4: {fileID: 789309022}
   Antposition5: {fileID: 1665270114}
   logic: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!4 &2028122629
 Transform:
   m_ObjectHideFlags: 0
