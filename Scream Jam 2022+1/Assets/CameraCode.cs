@@ -30,30 +30,35 @@ public class CameraCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeLeft -= Time.deltaTime;
-        if (timeLeft >= 0)
+        if(CamOn == true)
         {
-            Camera.position = Camera.position + (Vector3.left * 1 * Time.deltaTime);
-        }
-        if (timeLeft <= 0)
-        {
-            Camera.position = Camera.position + (Vector3.right * 1 * Time.deltaTime);
-        }
-        if (timeLeft <= -10)
-        {
-            timeLeft = 10;
 
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (CamOn == true)
+            timeLeft -= Time.deltaTime;
+
+            if (timeLeft >= 0)
             {
-                LeaveCams();
-                transform.position = Room1.position;
+                Camera.position = Camera.position + (Vector3.left * 0.5f * Time.deltaTime);
             }
-            else
+            if (timeLeft <= 0)
             {
-                entercams();
+                Camera.position = Camera.position + (Vector3.right * 0.5f * Time.deltaTime);
+            }
+            if (timeLeft <= -7)
+            {
+                timeLeft = 7;
+
+            }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (CamOn == true)
+                {
+                    LeaveCams();
+                    transform.position = Room1.position;
+                }
+                else
+                {
+                    entercams();
+                }
             }
         }
     }
@@ -63,28 +68,31 @@ public class CameraCode : MonoBehaviour
         transform.position = Room1.position;
         logic.CamsOn();
         CamOn = true;
+        timeLeft = 5;
     }
     public void GoToRoom1()
     {
         transform.position = Room1.position;
         LastCam = 1;
+        timeLeft = 5;
     }
     public void GoToRoom2()
     {
         transform.position = Room2.position;
         LastCam = 2;
-
+        timeLeft = 5;
     }
     public void GoToRoom3()
     {
         transform.position = Room3.position;
         LastCam = 3;
+        timeLeft = 5;
     }
     public void GoToRoom4()
     {
         transform.position = Room4.position;
         LastCam = 4;
-
+        timeLeft = 5;
     }
     public void LeaveCams()
     {
@@ -102,6 +110,7 @@ public class CameraCode : MonoBehaviour
         else
         {
             //lmao nothing
+            // probably sould make a sound or smth
         }
 
     }
