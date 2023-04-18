@@ -136,14 +136,6 @@ public class CameraCode : MonoBehaviour
         logic.LeaveCams();
         CamOn = false;
     }
-    public void Scarecrow()
-    {
-        if (CamOn == true)
-        {
-            logic.gameover();
-        }
-        
-    }
     public void Bugspray()
     {
         if (spraysLeft > 0)

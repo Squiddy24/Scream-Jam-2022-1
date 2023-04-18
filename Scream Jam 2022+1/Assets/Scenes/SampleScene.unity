@@ -4934,7 +4934,7 @@ Transform:
   m_LocalScale: {x: 1.2375, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &104109318
 GameObject:
@@ -6611,7 +6611,6 @@ MonoBehaviour:
   Scarecrowposition3: {fileID: 1134835721}
   Scarecrowpositionnegative1: {fileID: 145738227}
   logic: {fileID: 0}
-  Camera: {fileID: 963194229}
 --- !u!4 &983116753
 Transform:
   m_ObjectHideFlags: 0
@@ -7244,7 +7243,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 =======
 >>>>>>> Stashed changes
