@@ -10,6 +10,8 @@ public class Antlogic : MonoBehaviour
     public GameObject Antposition1;
     public GameObject Antposition2;
     public GameObject Antposition3;
+    public GameObject Antposition4;
+    public GameObject Antposition5;
     public LogicCode logic;
     void Start()
     {
@@ -23,8 +25,18 @@ public class Antlogic : MonoBehaviour
             int randomNumber = Random.Range(1, 22);
             if (AntDifficulty >= randomNumber)
             {
-                Antpositon = Antpositon + 1;
-                timeLeft = 5;
+                randomNumber = Random.Range(-1, 1);
+                if (randomNumber == 0)
+                {
+                    Antpositon = Antpositon + 1;
+                    timeLeft = 5;
+                }
+                else
+                {
+                    Antpositon = Antpositon + randomNumber;
+                    timeLeft = 5;
+                }
+                
             }
             else
             {
@@ -35,18 +47,47 @@ public class Antlogic : MonoBehaviour
         {
             Antposition2.SetActive(true);
             Antposition1.SetActive(false);
+            Antposition4.SetActive(false);
+            Antposition5.SetActive(false);
         }
         if (Antpositon == 0)
         {
             Antposition2.SetActive(false);
             Antposition1.SetActive(true);
+            Antposition4.SetActive(false);
+            Antposition5.SetActive(false);
+        }
+        if (Antpositon == -2)
+        {
+            Antposition2.SetActive(false);
+            Antposition1.SetActive(false);
+            Antposition4.SetActive(false);
+            Antposition5.SetActive(true);
+
+        }
+        if (Antpositon == -1)
+        {
+            Antposition2.SetActive(false);
+            Antposition1.SetActive(false);
+            Antposition4.SetActive(true);
+            Antposition5.SetActive(false);
         }
         if (Antpositon == 2)
         {
             Antposition2.SetActive(false);
             Antposition1.SetActive(false);
+            Antposition4.SetActive(false);
+            Antposition5.SetActive(false);
         }
-        if (Antpositon >= 2)
+        if (Antpositon <= -2)
+        {
+            Antposition2.SetActive(false);
+            Antposition1.SetActive(false);
+            Antposition4.SetActive(false);
+            Antposition5.SetActive(true);
+            Antpositon = 0;
+        }
+            if (Antpositon >= 2)
         {
             logic.gameover();
         }
