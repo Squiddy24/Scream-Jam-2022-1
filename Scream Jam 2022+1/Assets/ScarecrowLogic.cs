@@ -12,6 +12,7 @@ public class ScarecrowLogic : MonoBehaviour
     public GameObject Scarecrowposition3;
     public GameObject Scarecrowpositionnegative1;
     public LogicCode logic;
+    public CameraCode Camera;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
@@ -23,28 +24,21 @@ public class ScarecrowLogic : MonoBehaviour
         {
             int randomNumber = Random.Range(1, 22);
             if (ScarecrowDifficulty >= randomNumber)
-            {
-                randomNumber = Random.Range(-1, 1);
-                if (randomNumber == 0)
-                {
+            {               
                     Scarecrowpositon = Scarecrowpositon + 1;
                     timeLeft = 5;
-                }
-                else
-                {
-                    Scarecrowpositon = Scarecrowpositon + randomNumber;
-                    timeLeft = 5;
-                }
-
             }
             else
             {
                 timeLeft = 5;
             }
         }
-        if (Scarecrowpositon >= 3)
+        if (Scarecrowpositon >= 4)
         {
-            logic.gameover();
+            Camera.Scarecrow();
+            int randomNumber = Random.Range(-1, 3);
+            Scarecrowpositon = randomNumber;
+
         }
         if (Scarecrowpositon == -1)
         {
@@ -80,16 +74,6 @@ public class ScarecrowLogic : MonoBehaviour
             Scarecrowposition1.SetActive(false);
             Scarecrowposition3.SetActive(false);
             Scarecrowpositionnegative1.SetActive(false);
-        }
-    }
-    public void pranked()
-    {
-        if (Scarecrowpositon == 2)
-        {
-            Scarecrowpositon = 0;
-            Scarecrowposition2.SetActive(false);
-            Scarecrowposition1.SetActive(true);
-            Scarecrowposition3.SetActive(false);
         }
     }
 }

@@ -25,16 +25,23 @@ public class Antlogic : MonoBehaviour
             int randomNumber = Random.Range(1, 22);
             if (AntDifficulty >= randomNumber)
             {
-                randomNumber = Random.Range(-1, 1);
-                if (randomNumber == 0)
+                if (Antpositon != 2)
                 {
-                    Antpositon = Antpositon + 1;
-                    timeLeft = 5;
+                    randomNumber = Random.Range(-1, 1);
+                    if (randomNumber == 0)
+                    {
+                        Antpositon = Antpositon + 1;
+                        timeLeft = 5;
+                    }
+                    else
+                    {
+                        Antpositon = Antpositon + randomNumber;
+                        timeLeft = 5;
+                    }
                 }
                 else
                 {
-                    Antpositon = Antpositon + randomNumber;
-                    timeLeft = 5;
+                    Antpositon = Antpositon + 1;
                 }
                 
             }
@@ -87,7 +94,7 @@ public class Antlogic : MonoBehaviour
             Antposition5.SetActive(true);
             Antpositon = 0;
         }
-            if (Antpositon >= 2)
+            if (Antpositon > 2)
         {
             logic.gameover();
         }
