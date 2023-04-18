@@ -69,30 +69,66 @@ public class CameraCode : MonoBehaviour
         logic.CamsOn();
         CamOn = true;
         timeLeft = 5;
+        if(LastCam == 1)
+        {
+            transform.position = Room1.position;
+            LastCam = 1;
+            timeLeft = 5;
+        }
+        if (LastCam == 2)
+        {
+            transform.position = Room2.position;
+            LastCam = 2;
+            timeLeft = 5;
+        }
+        if (LastCam == 3)
+        {
+            transform.position = Room3.position;
+            LastCam = 3;
+            timeLeft = 5;
+        }
+        if (LastCam == 4)
+        {
+            transform.position = Room4.position;
+            LastCam = 4;
+            timeLeft = 5; 
+        }
     }
     public void GoToRoom1()
     {
-        transform.position = Room1.position;
-        LastCam = 1;
-        timeLeft = 5;
+        if (LastCam != 1)
+        {
+            transform.position = Room1.position;
+            LastCam = 1;
+            timeLeft = 5;
+        }     
     }
     public void GoToRoom2()
     {
-        transform.position = Room2.position;
-        LastCam = 2;
-        timeLeft = 5;
+        if (LastCam != 2)
+        {
+            transform.position = Room2.position;
+            LastCam = 2;
+            timeLeft = 5;
+        }
     }
     public void GoToRoom3()
     {
-        transform.position = Room3.position;
-        LastCam = 3;
-        timeLeft = 5;
+        if (LastCam != 3)
+        {
+            transform.position = Room3.position;
+            LastCam = 3;
+            timeLeft = 5;
+        }
     }
     public void GoToRoom4()
     {
-        transform.position = Room4.position;
-        LastCam = 4;
-        timeLeft = 5;
+        if (LastCam != 4)
+        {
+            transform.position = Room4.position;
+            LastCam = 4;
+            timeLeft = 5;
+        }
     }
     public void LeaveCams()
     {
