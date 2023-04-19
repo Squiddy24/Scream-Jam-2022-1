@@ -25,6 +25,7 @@ public class CameraCode : MonoBehaviour
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
         antlogic = GameObject.FindGameObjectWithTag("Ant").GetComponent<Antlogic>();
+        LastCam = 2;
     }
 
     // Update is called once per frame
