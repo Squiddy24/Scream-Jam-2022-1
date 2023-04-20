@@ -7,11 +7,18 @@ public class Antlogic : MonoBehaviour
     public int AntDifficulty = 5;
     public float timeLeft = 5f;
     public int Antpositon = 1;
-    public GameObject Antposition1;
-    public GameObject Antposition2;
-    public GameObject Antposition3;
-    public GameObject Antposition4;
-    public GameObject Antposition5;
+    public GameObject Antsilo1;
+    public GameObject Antsilo2;
+    public GameObject Antsilo3;
+    public GameObject Antfield21;
+    public GameObject Antfield22;
+    public GameObject Antfield23;
+    public GameObject Antfield1;
+    public GameObject Antfield2;
+    public GameObject Antfield3;
+    public GameObject Antcorn1;
+    public GameObject Antcorn2;
+    public GameObject Antcorn3;
     public LogicCode logic;
     void Start()
     {
@@ -45,47 +52,128 @@ public class Antlogic : MonoBehaviour
         }
         if (Antpositon == 1)
         {
-            Antposition2.SetActive(true);
-            Antposition1.SetActive(false);
-            Antposition4.SetActive(false);
-            Antposition5.SetActive(false);
+            Antfield1.SetActive(false);
+            Antfield2.SetActive(false);
+            Antfield3.SetActive(false);
+            Antfield21.SetActive(false);
+            Antfield22.SetActive(false);
+            Antfield23.SetActive(false);
+            Antcorn1.SetActive(false);
+            Antcorn2.SetActive(false);
+            Antcorn3.SetActive(false);
+            Antsilo1.SetActive(false);
+            Antsilo2.SetActive(false);
+            Antsilo3.SetActive(false);
         }
         if (Antpositon == 0)
         {
-            Antposition2.SetActive(false);
-            Antposition1.SetActive(true);
-            Antposition4.SetActive(false);
-            Antposition5.SetActive(false);
+            Antfield1.SetActive(false);
+            Antfield2.SetActive(false);
+            Antfield3.SetActive(false);
+            Antfield21.SetActive(false);
+            Antfield22.SetActive(false);
+            Antfield23.SetActive(false);
+            Antcorn1.SetActive(false);
+            Antcorn2.SetActive(false);
+            Antcorn3.SetActive(false);
+            Antsilo1.SetActive(false);
+            Antsilo2.SetActive(false);
+            Antsilo3.SetActive(false);
+            int randomNumber = Random.Range(1, 3);
+            if (randomNumber == 3)
+            {
+                Antfield1.SetActive(true);
+            }
+
+            if (randomNumber == 2)
+            {
+                Antfield2.SetActive(true);
+            }
+
+            if (randomNumber == 1)
+            {
+                Antfield3.SetActive(true);
+            }
         }
         if (Antpositon == -2)
         {
-            Antposition2.SetActive(false);
-            Antposition1.SetActive(false);
-            Antposition4.SetActive(false);
-            Antposition5.SetActive(true);
+            Antfield1.SetActive(false);
+            Antfield2.SetActive(false);
+            Antfield3.SetActive(false);
+            Antfield21.SetActive(false);
+            Antfield22.SetActive(false);
+            Antfield23.SetActive(false);
+            Antcorn1.SetActive(false);
+            Antcorn2.SetActive(false);
+            Antcorn3.SetActive(false);
+            Antsilo1.SetActive(false);
+            Antsilo2.SetActive(false);
+            Antsilo3.SetActive(false);
+            int randomNumber = Random.Range(1, 3);
+            if (randomNumber == 3)
+            {
+                Antsilo1.SetActive(true);
+            }
+
+            if (randomNumber == 2)
+            {
+                Antsilo2.SetActive(true);
+            }
+
+            if (randomNumber == 1)
+            {
+                Antsilo3.SetActive(true);
+            }
 
         }
         if (Antpositon == -1)
         {
-            Antposition2.SetActive(false);
-            Antposition1.SetActive(false);
-            Antposition4.SetActive(true);
-            Antposition5.SetActive(false);
+            Antfield1.SetActive(false);
+            Antfield2.SetActive(false);
+            Antfield3.SetActive(false);
+            Antfield21.SetActive(false);
+            Antfield22.SetActive(false);
+            Antfield23.SetActive(false);
+            Antcorn1.SetActive(false);
+            Antcorn2.SetActive(false);
+            Antcorn3.SetActive(false);
+            Antsilo1.SetActive(false);
+            Antsilo2.SetActive(false);
+            Antsilo3.SetActive(false);
+            int randomNumber = Random.Range(1, 3);
+            if (randomNumber == 3)
+            {
+                Antcorn1.SetActive(true);
+            }
+
+            if (randomNumber == 2)
+            {
+                Antcorn2.SetActive(true);
+            }
+
+            if (randomNumber == 1)
+            {
+                Antcorn3.SetActive(true);
+            }
         }
         if (Antpositon == 2)
         {
-            Antposition2.SetActive(false);
-            Antposition1.SetActive(false);
-            Antposition4.SetActive(false);
-            Antposition5.SetActive(false);
+            Antfield1.SetActive(false);
+            Antfield2.SetActive(false);
+            Antfield3.SetActive(false);
+            Antfield21.SetActive(false);
+            Antfield22.SetActive(false);
+            Antfield23.SetActive(false);
+            Antcorn1.SetActive(false);
+            Antcorn2.SetActive(false);
+            Antcorn3.SetActive(false);
+            Antsilo1.SetActive(false);
+            Antsilo2.SetActive(false);
+            Antsilo3.SetActive(false);
         }
         if (Antpositon <= -2)
         {
-            Antposition2.SetActive(false);
-            Antposition1.SetActive(false);
-            Antposition4.SetActive(false);
-            Antposition5.SetActive(true);
-            Antpositon = 0;
+            Antpositon = 2;
         }
             if (Antpositon >= 2)
         {
@@ -96,10 +184,20 @@ public class Antlogic : MonoBehaviour
     {
         if (Antpositon == 2)
         {
+            Antfield1.SetActive(false);
+            Antfield2.SetActive(false);
+            Antfield3.SetActive(false);
+            Antfield21.SetActive(false);
+            Antfield22.SetActive(false);
+            Antfield23.SetActive(false);
+            Antcorn1.SetActive(false);
+            Antcorn2.SetActive(false);
+            Antcorn3.SetActive(false);
+            Antsilo1.SetActive(false);
+            Antsilo2.SetActive(false);
+            Antsilo3.SetActive(false);
             Antpositon = 0;
-            Antposition2.SetActive(false);
-            Antposition1.SetActive(true);
-            Antposition3.SetActive(false);
+            
         }
     }
 }
