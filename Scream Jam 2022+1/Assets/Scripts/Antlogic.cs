@@ -189,8 +189,6 @@ public class Antlogic : MonoBehaviour
                 int randomNumber2 = Random.Range(-1, 1);
                 Antpositon = Antpositon + randomNumber2;
                 timeLeft = 5;
-                Antpositon = Antpositon + 1;
-                timeLeft = 5;
                 if (Antpositon == 1)
                 {
                     Antfield1.SetActive(false);
