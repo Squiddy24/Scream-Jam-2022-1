@@ -36,33 +36,22 @@ public class CameraCode : MonoBehaviour
         if (CamOn == true)
         {
 
-            timeLeft -= Time.deltaTime;
+            timeLeft -= 0.02f;
 
             if (timeLeft >= 0)
             {
-                Camera.position = Camera.position + (Vector3.left * 0.5f * Time.deltaTime);
+                Camera.position = Camera.position + (Vector3.left * 0.5f * 0.02f);
             }
             if (timeLeft <= 0)
             {
-                Camera.position = Camera.position + (Vector3.right * 0.5f * Time.deltaTime);
+                Camera.position = Camera.position + (Vector3.right * 0.5f * 0.02f);
             }
             if (timeLeft <= -7)
             {
                 timeLeft = 7;
 
             }
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                if (CamOn == true)
-                {
-                    LeaveCams();
-                    transform.position = Room1.position;
-                }
-                else
-                {
-                    entercams();
-                }
-            }
+           
         }
     }
 

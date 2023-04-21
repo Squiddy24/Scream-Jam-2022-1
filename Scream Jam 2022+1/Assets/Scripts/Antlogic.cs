@@ -26,7 +26,7 @@ public class Antlogic : MonoBehaviour
     }
     void Update()
     {
-        timeLeft -= Time.deltaTime;
+        timeLeft -= 0.02f;
         if (timeLeft <= 0)
         {
             int randomNumber = Random.Range(1, 22);
