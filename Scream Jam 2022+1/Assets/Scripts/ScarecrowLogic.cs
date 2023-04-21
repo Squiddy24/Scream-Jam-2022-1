@@ -42,7 +42,6 @@ public class ScarecrowLogic : MonoBehaviour
         Scarecrowfield22.SetActive(false);
         Scarecrowfield23.SetActive(false);
     }
-
     void Update()
     {
         timeLeft -= 0.02f;
