@@ -9,12 +9,12 @@ public class Locust : MonoBehaviour
     public float timeLeft;
     public int LocustDifficulty;
     public static int dangerLVL;
-
+    public LogicCode logic;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
     }
 
     // Update is called once per frame
@@ -42,6 +42,10 @@ public class Locust : MonoBehaviour
                 }
                 
             }
+        }
+        if (dangerLVL >= 5)
+        {
+            logic.locustsjump();
         }
     }
 }
