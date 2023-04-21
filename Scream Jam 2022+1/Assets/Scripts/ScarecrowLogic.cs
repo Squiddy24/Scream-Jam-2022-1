@@ -198,6 +198,21 @@ public class ScarecrowLogic : MonoBehaviour
                 {
                     logic.scarecrowjump();
                     Scarecrowpositon = Scarecrowpositon - 6;
+                    randomNumber = Random.Range(1, 3);
+                    if (randomNumber == 3)
+                    {
+                        Scarecrowsilo1.SetActive(true);
+                    }
+
+                    if (randomNumber == 2)
+                    {
+                        Scarecrowsilo2.SetActive(true);
+                    }
+
+                    if (randomNumber == 1)
+                    {
+                        Scarecrowsilo3.SetActive(true);
+                    }
                 }
             }
 

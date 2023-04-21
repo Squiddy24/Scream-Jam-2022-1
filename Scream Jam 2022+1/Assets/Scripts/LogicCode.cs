@@ -29,6 +29,10 @@ public class LogicCode : MonoBehaviour
         {
             Gameover = true;
         }
+        if (yadead == true)
+        {
+            
+        }
     }
     public void CamsOn()
     {
