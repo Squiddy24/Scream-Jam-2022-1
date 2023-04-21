@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LogicCode : MonoBehaviour
 {
@@ -65,11 +66,11 @@ public class LogicCode : MonoBehaviour
             scarecrowscare.SetActive(true);
             yadead = true;
             Camera_UI.SetActive(false);
-            Entercams_UI.SetActive(true);
-            bugspray_UI.SetActive(true);
+            Entercams_UI.SetActive(false);
+            bugspray_UI.SetActive(false);
             cameraon = false;
             Camera.LeaveCams();
-
+            StartCoroutine(Death());
         }
     }
     public void antjump()
@@ -87,5 +88,11 @@ public class LogicCode : MonoBehaviour
         cameraon = false;
         Camera.LeaveCams();
     }
+    public IEnumerator Death()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Dead");
+    }
+
 
 }
