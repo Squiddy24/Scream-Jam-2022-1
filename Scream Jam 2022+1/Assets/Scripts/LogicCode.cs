@@ -12,6 +12,7 @@ public class LogicCode : MonoBehaviour
     public bool yadead = false;
     public bool Gameover = false;
     public CameraCode Camera;
+    public GameObject Antscare;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +58,11 @@ public class LogicCode : MonoBehaviour
             Camera.LeaveCams();
 
         }
+    }
+    public void antjump()
+    {
+            Antscare.SetActive(true);
+            yadead = true;
     }
 
 }

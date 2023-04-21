@@ -3146,6 +3146,7 @@ MonoBehaviour:
   yadead: 0
   Gameover: 0
   Camera: {fileID: 0}
+  Antscare: {fileID: 1541933630}
 --- !u!4 &1095891816
 Transform:
   m_ObjectHideFlags: 0
@@ -9794,18 +9795,18 @@ MonoBehaviour:
   AntDifficulty: 2
   timeLeft: 5
   Antpositon: 0
-  Antsilo1: {fileID: 0}
-  Antsilo2: {fileID: 0}
-  Antsilo3: {fileID: 0}
-  Antfield21: {fileID: 0}
-  Antfield22: {fileID: 0}
-  Antfield23: {fileID: 0}
-  Antfield1: {fileID: 0}
-  Antfield2: {fileID: 0}
-  Antfield3: {fileID: 0}
-  Antcorn1: {fileID: 0}
-  Antcorn2: {fileID: 0}
-  Antcorn3: {fileID: 0}
+  Antsilo1: {fileID: 603308671}
+  Antsilo2: {fileID: 1062258251}
+  Antsilo3: {fileID: 270012798}
+  Antfield21: {fileID: 1198441375}
+  Antfield22: {fileID: 1276949285}
+  Antfield23: {fileID: 1184935722}
+  Antfield1: {fileID: 1224510028}
+  Antfield2: {fileID: 1426022903}
+  Antfield3: {fileID: 774961114}
+  Antcorn1: {fileID: 1189685551}
+  Antcorn2: {fileID: 1972432891}
+  Antcorn3: {fileID: 238248996}
   logic: {fileID: 0}
 --- !u!4 &2028122629
 Transform:
