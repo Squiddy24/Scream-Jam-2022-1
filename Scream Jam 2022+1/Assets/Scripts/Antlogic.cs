@@ -148,7 +148,12 @@ public class Antlogic : MonoBehaviour
             
             else
             {
-                int randomNumber2 = Random.Range(-1, 1);
+                int randomNumber2 = Random.Range(-1,0);
+                if (randomNumber2 == 0)
+                {
+                    randomNumber2 = 1;
+                    Debug.Log(randomNumber2);
+                }
                 Antpositon = Antpositon + randomNumber2;
                 timeLeft = 6;
                 if (Antpositon == 1)

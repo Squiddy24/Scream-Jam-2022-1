@@ -24,7 +24,7 @@ public class Time : MonoBehaviour
 
     public IEnumerator TimePassing()
     {
-        yield return new WaitForSeconds(120);
+        yield return new WaitForSeconds(60);
         hour += 1;
         TimeText.text = hour.ToString() + " AM";
         StartCoroutine(TimePassing());
