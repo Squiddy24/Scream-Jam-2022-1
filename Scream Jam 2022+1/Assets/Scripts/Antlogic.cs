@@ -20,7 +20,7 @@ public class Antlogic : MonoBehaviour
     public GameObject Antcorn2;
     public GameObject Antcorn3;
     public LogicCode logic;
-    public int Antmove; 
+    public int Antmove;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
@@ -47,10 +47,10 @@ public class Antlogic : MonoBehaviour
         if (timeLeft <= 0)
             {
                 
-                
             int RandomNumber = Random.Range(0, 20);
             if (AntDifficulty >= RandomNumber)
             {
+                
                 int RandomNumber3 = Random.Range(0, 1);
                 if (RandomNumber3 == 1)
                 {
@@ -148,6 +148,10 @@ public class Antlogic : MonoBehaviour
                 }
                 timeLeft = 6;
 
+            }
+            else
+            {
+                timeLeft = 6;
             }
             if (Antpositon > 2)
             {
