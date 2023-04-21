@@ -13,7 +13,7 @@ public class CameraCode : MonoBehaviour
     public LogicCode logic;
     public Antlogic antlogic;
     public Transform Camera;
-    public GameObject Static;
+    //public GameObject Static;
     public bool CamOn;
     public float timeLeft = 5f;
 
@@ -58,7 +58,7 @@ public class CameraCode : MonoBehaviour
 
     public void entercams()
     {
-        Static.SetActive(true);
+        //Static.SetActive(true);
         transform.position = Room1.position;
         logic.CamsOn();
         CamOn = true;

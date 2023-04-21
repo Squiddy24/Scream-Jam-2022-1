@@ -5,7 +5,7 @@ using UnityEngine;
 public class Antlogic : MonoBehaviour
 {
     public int AntDifficulty = 5;
-    public float timeLeft = 5f;
+    public float timeLeft = 6f;
     public int Antpositon = 1;
     public GameObject Antsilo1;
     public GameObject Antsilo2;
@@ -36,7 +36,7 @@ public class Antlogic : MonoBehaviour
                 if (randomNumber == 0)
                 {
                     Antpositon = Antpositon + 1;
-                    timeLeft = 5;
+                    timeLeft = 6;
                     if (Antpositon == 1)
                     {
                         Antfield1.SetActive(false);
@@ -188,7 +188,7 @@ public class Antlogic : MonoBehaviour
             {
                 int randomNumber2 = Random.Range(-1, 1);
                 Antpositon = Antpositon + randomNumber2;
-                timeLeft = 5;
+                timeLeft = 6;
                 if (Antpositon == 1)
                 {
                     Antfield1.SetActive(false);
