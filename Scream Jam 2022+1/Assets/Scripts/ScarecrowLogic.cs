@@ -26,6 +26,23 @@ public class ScarecrowLogic : MonoBehaviour
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
 
     }
+
+    void Clearpos()
+    {
+        Scarecrowsilo1.SetActive(false);
+        Scarecrowsilo2.SetActive(false);
+        Scarecrowsilo3.SetActive(false);
+        Scarecrowcorn1.SetActive(false);
+        Scarecrowcorn2.SetActive(false);
+        Scarecrowcorn3.SetActive(false);
+        Scarecrowfield1.SetActive(false);
+        Scarecrowfield2.SetActive(false);
+        Scarecrowfield3.SetActive(false);
+        Scarecrowfield21.SetActive(false);
+        Scarecrowfield22.SetActive(false);
+        Scarecrowfield23.SetActive(false);
+    }
+
     void Update()
     {
         timeLeft -= 0.02f;
@@ -40,21 +57,7 @@ public class ScarecrowLogic : MonoBehaviour
                 timeLeft = 5;
                 if (Scarecrowpositon == 0)
                 {
-                    Scarecrowsilo1.SetActive(false);
-                    Scarecrowsilo2.SetActive(false);
-                    Scarecrowsilo3.SetActive(false);
-                    Scarecrowsilo1.SetActive(false);
-                    Scarecrowsilo2.SetActive(false);
-                    Scarecrowsilo3.SetActive(false);
-                    Scarecrowcorn1.SetActive(false);
-                    Scarecrowcorn2.SetActive(false);
-                    Scarecrowcorn3.SetActive(false);
-                    Scarecrowfield1.SetActive(false);
-                    Scarecrowfield2.SetActive(false);
-                    Scarecrowfield3.SetActive(false);
-                    Scarecrowfield21.SetActive(false);
-                    Scarecrowfield22.SetActive(false);
-                    Scarecrowfield23.SetActive(false);
+                    Clearpos();
 
                     randomNumber = Random.Range(1, 3);
                     if (randomNumber == 3)
@@ -74,21 +77,7 @@ public class ScarecrowLogic : MonoBehaviour
                 }
                 else if (Scarecrowpositon == 1)
                 {
-                    Scarecrowsilo1.SetActive(false);
-                    Scarecrowsilo2.SetActive(false);
-                    Scarecrowsilo3.SetActive(false);
-                    Scarecrowsilo1.SetActive(false);
-                    Scarecrowsilo2.SetActive(false);
-                    Scarecrowsilo3.SetActive(false);
-                    Scarecrowcorn1.SetActive(false);
-                    Scarecrowcorn2.SetActive(false);
-                    Scarecrowcorn3.SetActive(false);
-                    Scarecrowfield1.SetActive(false);
-                    Scarecrowfield2.SetActive(false);
-                    Scarecrowfield3.SetActive(false);
-                    Scarecrowfield21.SetActive(false);
-                    Scarecrowfield22.SetActive(false);
-                    Scarecrowfield23.SetActive(false);
+                    Clearpos();
 
                     randomNumber = Random.Range(1, 3);
                     if (randomNumber == 3)
@@ -109,21 +98,7 @@ public class ScarecrowLogic : MonoBehaviour
                 }
                 else if (Scarecrowpositon == 2)
                 {
-                    Scarecrowsilo1.SetActive(false);
-                    Scarecrowsilo2.SetActive(false);
-                    Scarecrowsilo3.SetActive(false);
-                    Scarecrowsilo1.SetActive(false);
-                    Scarecrowsilo2.SetActive(false);
-                    Scarecrowsilo3.SetActive(false);
-                    Scarecrowcorn1.SetActive(false);
-                    Scarecrowcorn2.SetActive(false);
-                    Scarecrowcorn3.SetActive(false);
-                    Scarecrowfield1.SetActive(false);
-                    Scarecrowfield2.SetActive(false);
-                    Scarecrowfield3.SetActive(false);
-                    Scarecrowfield21.SetActive(false);
-                    Scarecrowfield22.SetActive(false);
-                    Scarecrowfield23.SetActive(false);
+                    Clearpos();
 
                     randomNumber = Random.Range(1, 3);
                     if (randomNumber == 3)
@@ -143,21 +118,7 @@ public class ScarecrowLogic : MonoBehaviour
                 }
                 else if (Scarecrowpositon == -1)
                 {
-                    Scarecrowsilo1.SetActive(false);
-                    Scarecrowsilo2.SetActive(false);
-                    Scarecrowsilo3.SetActive(false);
-                    Scarecrowsilo1.SetActive(false);
-                    Scarecrowsilo2.SetActive(false);
-                    Scarecrowsilo3.SetActive(false);
-                    Scarecrowcorn1.SetActive(false);
-                    Scarecrowcorn2.SetActive(false);
-                    Scarecrowcorn3.SetActive(false);
-                    Scarecrowfield1.SetActive(false);
-                    Scarecrowfield2.SetActive(false);
-                    Scarecrowfield3.SetActive(false);
-                    Scarecrowfield21.SetActive(false);
-                    Scarecrowfield22.SetActive(false);
-                    Scarecrowfield23.SetActive(false);
+                    Clearpos();
 
                     randomNumber = Random.Range(1, 3);
                     if (randomNumber == 3)
@@ -178,21 +139,7 @@ public class ScarecrowLogic : MonoBehaviour
                 }
                 else if (Scarecrowpositon == 3)
                 {
-                    Scarecrowsilo1.SetActive(false);
-                    Scarecrowsilo2.SetActive(false);
-                    Scarecrowsilo3.SetActive(false);
-                    Scarecrowsilo1.SetActive(false);
-                    Scarecrowsilo2.SetActive(false);
-                    Scarecrowsilo3.SetActive(false);
-                    Scarecrowcorn1.SetActive(false);
-                    Scarecrowcorn2.SetActive(false);
-                    Scarecrowcorn3.SetActive(false);
-                    Scarecrowfield1.SetActive(false);
-                    Scarecrowfield2.SetActive(false);
-                    Scarecrowfield3.SetActive(false);
-                    Scarecrowfield21.SetActive(false);
-                    Scarecrowfield22.SetActive(false);
-                    Scarecrowfield23.SetActive(false);
+                    Clearpos();
                 }
                 else if (Scarecrowpositon >= 4)
                 {
