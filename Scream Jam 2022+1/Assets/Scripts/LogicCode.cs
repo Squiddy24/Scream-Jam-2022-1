@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LogicCode : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class LogicCode : MonoBehaviour
     public GameObject Entercams_UI;
     public GameObject bugspray_UI;
     public GameObject scarecrowscare;
+    public Image shake;
+    public Text shaketext;
     public bool cameraon = false;
     public bool yadead = false;
     public bool Gameover = false;
@@ -33,6 +36,8 @@ public class LogicCode : MonoBehaviour
         Entercams_UI.SetActive(false);
         bugspray_UI.SetActive(false);
         cameraon = true;
+        shake.enabled = false;
+        shaketext.enabled = false;
     }
     public void LeaveCams()
     {
@@ -40,6 +45,9 @@ public class LogicCode : MonoBehaviour
         Entercams_UI.SetActive(true);
         bugspray_UI.SetActive(true);
         cameraon = false;
+        shake.enabled = true;
+        shaketext.enabled = true;
+
     }
     public void gameover()
     {

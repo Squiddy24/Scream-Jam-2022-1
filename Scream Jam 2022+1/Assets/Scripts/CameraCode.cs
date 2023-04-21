@@ -16,7 +16,7 @@ public class CameraCode : MonoBehaviour
     public bool CamOn;
     public float timeLeft = 5f;
 
-    public int spraysLeft = 3;
+    public int SprayPercentage = ButtonPressed.Percentage;
 
     public int LastCam;
 
@@ -31,7 +31,9 @@ public class CameraCode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(CamOn == true)
+        SprayPercentage = ButtonPressed.Percentage;
+
+        if (CamOn == true)
         {
 
             timeLeft -= Time.deltaTime;
@@ -139,10 +141,10 @@ public class CameraCode : MonoBehaviour
     }
     public void Bugspray()
     {
-        if (spraysLeft > 0)
+        if (SprayPercentage > 25)
         {
             antlogic.sprayed();
-            spraysLeft = spraysLeft - 1;
+            ButtonPressed.Percentage = SprayPercentage - 25;
         }
         else
         {
