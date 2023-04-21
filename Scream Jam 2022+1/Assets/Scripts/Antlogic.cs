@@ -56,8 +56,11 @@ public class Antlogic : MonoBehaviour
                 {
                     Antmove = -1;
                 }
-            Antpositon = Antpositon + Antmove;
-            if (Antpositon == 1)
+            int RandomNumber = Random.Range(0, 20);
+            if (AntDifficulty <= RandomNumber)
+            {
+                Antpositon = Antpositon + Antmove;
+                if (Antpositon == 1)
                 {
                     ClearPos();
                     int randomNumber2 = Random.Range(1, 3);
@@ -142,14 +145,16 @@ public class Antlogic : MonoBehaviour
                 {
                     Antpositon = 2;
                 }
-            timeLeft = 6;
-                
+                timeLeft = 6;
+
             }
             if (Antpositon > 2)
             {
                 logic.antjump();
 
             }
+        }
+            
 
         }
     public void sprayed()
