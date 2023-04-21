@@ -14,12 +14,12 @@ public class CameraCode : MonoBehaviour
     public Antlogic antlogic;
     public Transform Camera;
     //public GameObject Static;
-    public bool CamOn;
+    public static bool CamOn;
     public float timeLeft = 5f;
 
     public int SprayPercentage = ButtonPressed.Percentage;
 
-    public int LastCam;
+    public static int LastCam;
 
     // Start is called before the first frame update
     void Start()
