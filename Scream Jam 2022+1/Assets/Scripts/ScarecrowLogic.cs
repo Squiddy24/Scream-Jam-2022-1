@@ -42,6 +42,7 @@ public class ScarecrowLogic : MonoBehaviour
         Scarecrowfield22.SetActive(false);
         Scarecrowfield23.SetActive(false);
     }
+
     void Update()
     {
         timeLeft -= 0.02f;
@@ -160,6 +161,10 @@ public class ScarecrowLogic : MonoBehaviour
                         Scarecrowsilo3.SetActive(true);
                     }
                 }
+            }
+            else
+            {
+                timeLeft = 5;
             }
 
         }
