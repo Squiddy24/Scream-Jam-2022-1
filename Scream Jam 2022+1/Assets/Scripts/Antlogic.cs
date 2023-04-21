@@ -21,6 +21,7 @@ public class Antlogic : MonoBehaviour
     public GameObject Antcorn3;
     public LogicCode logic;
     public int Antmove;
+    public bool Antattack;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
@@ -43,6 +44,24 @@ public class Antlogic : MonoBehaviour
 
     void Update()
     {
+        if (Antpositon < -2)
+        {
+            Antpositon = -2;
+        }
+        if (Antpositon > 2)
+        {
+            logic.antjump();
+
+        }
+        if (Antpositon == 2)
+        {
+            ClearPos();
+            Antattack = true;
+        }
+        if (Antpositon != 2)
+        { 
+            Antattack = false;
+        }
         timeLeft -= 0.02f;
         if (timeLeft <= 0)
             {
@@ -51,14 +70,14 @@ public class Antlogic : MonoBehaviour
             if (AntDifficulty >= RandomNumber)
             {
                 
-                int RandomNumber3 = Random.Range(0, 1);
-                if (RandomNumber3 == 1)
-                {
-                    Antmove = 1;
-                }
-                else if (RandomNumber3 == 0)
+                int RandomNumber3 = Random.Range(0, 2);
+                if (RandomNumber3 == 0 && Antattack == false)
                 {
                     Antmove = -1;
+                }
+                else
+                {
+                    Antmove = 1;
                 }
                 Antpositon = Antpositon + Antmove;
                 if (Antpositon == 1)
@@ -138,26 +157,15 @@ public class Antlogic : MonoBehaviour
                         Antcorn3.SetActive(true);
                     }
                 }
-                if (Antpositon == 2)
-                {
-                    ClearPos();
-                }
-                if (Antpositon <= -2)
-                {
-                    Antpositon = 2;
-                }
+                
                 timeLeft = 6;
 
             }
-            else
+            else 
             {
                 timeLeft = 6;
             }
-            if (Antpositon > 2)
-            {
-                logic.antjump();
-
-            }
+            
         }
             
 
