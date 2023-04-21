@@ -197,7 +197,7 @@ public class ScarecrowLogic : MonoBehaviour
                 else if (Scarecrowpositon >= 4)
                 {
                     logic.scarecrowjump();
-                    Scarecrowpositon = Scarecrowpositon - 4;
+                    Scarecrowpositon = Scarecrowpositon - 6;
                 }
             }
 
