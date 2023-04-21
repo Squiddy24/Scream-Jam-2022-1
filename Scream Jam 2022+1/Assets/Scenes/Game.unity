@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2847,7 +2847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435263116b2bf4cc7871a898a652ff7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScarecrowDifficulty: 20
+  ScarecrowDifficulty: 0
   timeLeft: 5
   Scarecrowpositon: 0
   Scarecrowsilo1: {fileID: 1576112809}
@@ -3389,6 +3389,8 @@ MonoBehaviour:
   Camera: {fileID: 0}
   Antscare: {fileID: 1541933630}
   locustscare: {fileID: 49055851}
+  office: {fileID: 1293689466}
+  UI: {fileID: 114983614}
 --- !u!4 &1095891816
 Transform:
   m_ObjectHideFlags: 0
@@ -10217,7 +10219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0d2156d0ae14ef88d402a904800fd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AntDifficulty: 0
+  AntDifficulty: 20
   timeLeft: 6
   Antpositon: 0
   Antsilo1: {fileID: 603308671}

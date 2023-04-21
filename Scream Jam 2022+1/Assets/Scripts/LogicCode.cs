@@ -18,6 +18,8 @@ public class LogicCode : MonoBehaviour
     public CameraCode Camera;
     public GameObject Antscare;
     public GameObject locustscare;
+    public GameObject office;
+    public GameObject UI;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,7 @@ public class LogicCode : MonoBehaviour
     {
         if (cameraon == false && yadead == true)
         {
-            Gameover = true;
+            StartCoroutine(Death());
         }
         if (yadead == true)
         {
@@ -68,24 +70,27 @@ public class LogicCode : MonoBehaviour
             Camera_UI.SetActive(false);
             Entercams_UI.SetActive(false);
             bugspray_UI.SetActive(false);
+            office.SetActive(false);
             cameraon = false;
             Camera.LeaveCams();
+            UI.SetActive(false);
             StartCoroutine(Death());
         }
     }
     public void antjump()
     {
-            Antscare.SetActive(true);
-            yadead = true;
+        Antscare.SetActive(true);
+        UI.SetActive(false);
+        office.SetActive(false);
+        yadead = true;
     }
     public void locustsjump()
     {
         locustscare.SetActive(true);
         yadead = true;
-        Camera_UI.SetActive(false);
-        Entercams_UI.SetActive(true);
-        bugspray_UI.SetActive(true);
+        UI.SetActive(false);
         cameraon = false;
+        office.SetActive(false);
         Camera.LeaveCams();
     }
     public IEnumerator Death()
