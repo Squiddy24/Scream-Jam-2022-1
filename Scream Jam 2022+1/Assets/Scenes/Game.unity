@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2652,10 +2652,8 @@ MonoBehaviour:
   logic: {fileID: 1095891815}
   antlogic: {fileID: 0}
   Camera: {fileID: 963194228}
-  CamOn: 0
   timeLeft: 5
   SprayPercentage: 100
-  LastCam: 0
 --- !u!1 &977192848
 GameObject:
   m_ObjectHideFlags: 0
@@ -4974,6 +4972,7 @@ GameObject:
   - component: {fileID: 1918630501}
   - component: {fileID: 1918630500}
   - component: {fileID: 1918630499}
+  - component: {fileID: 1918630502}
   m_Layer: 0
   m_Name: Locust
   m_TagString: Untagged
@@ -9776,6 +9775,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &1918630502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918630498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e40da81c0ff394261a579c25a27a010b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Locustparticals: {fileID: 1918630500}
+  emissionRate: 0
+  timeLeft: 5
+  LocustDifficulty: 10
 --- !u!1 &1970154199
 GameObject:
   m_ObjectHideFlags: 0
