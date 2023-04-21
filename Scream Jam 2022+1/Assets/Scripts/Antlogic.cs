@@ -47,6 +47,10 @@ public class Antlogic : MonoBehaviour
         if (timeLeft <= 0)
             {
                 
+                
+            int RandomNumber = Random.Range(0, 20);
+            if (AntDifficulty >= RandomNumber)
+            {
                 int RandomNumber3 = Random.Range(0, 1);
                 if (RandomNumber3 == 1)
                 {
@@ -56,9 +60,6 @@ public class Antlogic : MonoBehaviour
                 {
                     Antmove = -1;
                 }
-            int RandomNumber = Random.Range(0, 20);
-            if (AntDifficulty <= RandomNumber)
-            {
                 Antpositon = Antpositon + Antmove;
                 if (Antpositon == 1)
                 {
