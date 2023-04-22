@@ -143,7 +143,7 @@ public class CameraCode : MonoBehaviour
             antlogic.sprayed();
             if (Locust.dangerLVL > 0)
             {
-                Locust.dangerLVL -= 1;
+                Locust.dangerLVL = 0;
 
             }
             ButtonPressed.Percentage = SprayPercentage - 25;
