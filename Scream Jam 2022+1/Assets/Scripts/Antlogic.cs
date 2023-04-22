@@ -175,9 +175,24 @@ public class Antlogic : MonoBehaviour
     {
         if (Antpositon == 2)
         {
-            ClearPos();
             Antpositon = 0;
             timeLeft = 0;
+            ClearPos();
+            int randomNumber2 = Random.Range(1, 3);
+            if (randomNumber2 == 3)
+            {
+                Antfield1.SetActive(true);
+            }
+
+            if (randomNumber2 == 2)
+            {
+                Antfield2.SetActive(true);
+            }
+
+            if (randomNumber2 == 1)
+            {
+                Antfield3.SetActive(true);
+            }
         }
     }
     public IEnumerator Static()
