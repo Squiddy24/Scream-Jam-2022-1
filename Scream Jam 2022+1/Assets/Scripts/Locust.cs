@@ -48,16 +48,7 @@ public class Locust : MonoBehaviour
             timeLeft = 10;
             if (LocustDifficulty >= randomNumber)
             {
-                if (CameraCode.CamOn == true && CameraCode.LastCam == 1)
-                {
-
-                    Debug.Log("BLOCKED :)))");
-                }
-                else
-                {
                     dangerLVL += 1;
-                }
-                
             }
         }
         if (dangerLVL >= 5)

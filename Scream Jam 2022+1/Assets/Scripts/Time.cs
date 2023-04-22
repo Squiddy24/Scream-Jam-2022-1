@@ -19,6 +19,7 @@ public class Time : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Start
         Antlogic.AntDifficulty = 3;
         Locust.LocustDifficulty = 0;
         ScarecrowLogic.ScarecrowDifficulty = 0;
@@ -42,7 +43,7 @@ public class Time : MonoBehaviour
         if (hour == 2 && hour2triggerd == false)
         {
             Antlogic.AntDifficulty = 7;
-            Locust.LocustDifficulty = 4;
+            Locust.LocustDifficulty = 5;
             ScarecrowLogic.ScarecrowDifficulty = 1;
             hour2triggerd = true;
         }
@@ -50,8 +51,8 @@ public class Time : MonoBehaviour
         //Hour 3
         if (hour == 3 && hour3triggerd == false)
         {
-            Antlogic.AntDifficulty = 8;
-            Locust.LocustDifficulty = 5;
+            Antlogic.AntDifficulty = 9;
+            Locust.LocustDifficulty = 7;
             ScarecrowLogic.ScarecrowDifficulty = 3;
             hour3triggerd = true;
             audio.Play();
@@ -60,18 +61,18 @@ public class Time : MonoBehaviour
         //Hour 4
         if (hour == 4 && hour4triggerd == false)
         {
-            Antlogic.AntDifficulty = 10;
-            Locust.LocustDifficulty = 7;
-            ScarecrowLogic.ScarecrowDifficulty = 5;
+            Antlogic.AntDifficulty = 11;
+            Locust.LocustDifficulty = 10;
+            ScarecrowLogic.ScarecrowDifficulty = 8;
             hour4triggerd = true;
         }
 
         //Hour 5
         if (hour == 5 && hour5triggerd == false)
         {
-            Antlogic.AntDifficulty = 13;
-            Locust.LocustDifficulty = 9;
-            ScarecrowLogic.ScarecrowDifficulty = 8;
+            Antlogic.AntDifficulty = 15;
+            Locust.LocustDifficulty = 15;
+            ScarecrowLogic.ScarecrowDifficulty = 12;
             hour5triggerd = true;
             audio.Play();
         }

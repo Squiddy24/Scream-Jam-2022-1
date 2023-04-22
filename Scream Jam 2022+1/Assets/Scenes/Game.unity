@@ -4125,6 +4125,7 @@ MonoBehaviour:
   office: {fileID: 1293689466}
   UI: {fileID: 114983614}
   static1: {fileID: 1415409893}
+  ScarecrowLeaving: {fileID: 1095891817}
 --- !u!4 &1095891816
 Transform:
   m_ObjectHideFlags: 0
