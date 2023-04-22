@@ -10,6 +10,7 @@ public class ButtonPressed : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     public static int Percentage = 100;
     public Text PercentageTest;
     public RectTransform BugSprayImg;
+    public AudioSource Shakesound;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +27,13 @@ public class ButtonPressed : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     void IPointerDownHandler.OnPointerDown(PointerEventData eventData)
     {
         buttonPressed = true;
+        Shakesound.Play();
     }
 
     void IPointerUpHandler.OnPointerUp(PointerEventData eventData)
     {
         buttonPressed = false;
+        Shakesound.Stop();
     }
 
     public IEnumerator PercentageAdder()
@@ -39,6 +42,7 @@ public class ButtonPressed : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
         {
             while (buttonPressed)
             {
+
                 if (Percentage < 100)
                 {
                     Percentage += 1;

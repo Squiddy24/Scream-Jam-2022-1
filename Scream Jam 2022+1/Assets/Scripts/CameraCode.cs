@@ -22,7 +22,7 @@ public class CameraCode : MonoBehaviour
 
     [Header("Sounds")]
     public AudioSource Spraysound;
-
+    public AudioSource Staticsound;
    
 
     
@@ -66,6 +66,7 @@ public class CameraCode : MonoBehaviour
     {
         //Static.SetActive(true);
         transform.position = Room1.position;
+        Staticsound.Play();
         logic.CamsOn();
         CamOn = true;
         timeLeft = 5;
@@ -139,6 +140,7 @@ public class CameraCode : MonoBehaviour
     {
         transform.position = Office.position;
         logic.LeaveCams();
+        Staticsound.Play();
         CamOn = false;
     }
     public void Bugspray()
@@ -164,6 +166,7 @@ public class CameraCode : MonoBehaviour
     public IEnumerator Static()
     {
         static1.SetActive(true);
+        Staticsound.Play();
         yield return new WaitForSeconds(0.1f);
         static1.SetActive(false);
     }

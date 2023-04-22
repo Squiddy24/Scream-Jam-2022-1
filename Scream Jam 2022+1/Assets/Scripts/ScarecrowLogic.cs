@@ -22,6 +22,7 @@ public class ScarecrowLogic : MonoBehaviour
     public GameObject Scarecrowsleep;
     public LogicCode logic;
     public GameObject static1;
+
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
