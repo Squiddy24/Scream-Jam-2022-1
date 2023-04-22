@@ -13,7 +13,7 @@ public class ButtonPressed : MonoBehaviour,IPointerDownHandler,IPointerUpHandler
     // Start is called before the first frame update
     void Start()
     {
-       
+        Percentage = 100;
         StartCoroutine(PercentageAdder());
     }
 

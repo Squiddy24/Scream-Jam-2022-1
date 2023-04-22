@@ -3012,7 +3012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 435263116b2bf4cc7871a898a652ff7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScarecrowDifficulty: 20
   timeLeft: 5
   Scarecrowpositon: 0
   Scarecrowsilo1: {fileID: 1576112809}
@@ -4598,6 +4597,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hour: 0
   TimeText: {fileID: 1400686565}
+  hour1triggerd: 0
+  hour2triggerd: 0
+  hour3triggerd: 0
+  hour4triggerd: 0
+  hour5triggerd: 0
 --- !u!1 &1415409893
 GameObject:
   m_ObjectHideFlags: 0
@@ -6377,7 +6381,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -10288,7 +10292,6 @@ MonoBehaviour:
   Locustparticals: {fileID: 1918630500}
   emissionRate: 0
   timeLeft: 5
-  LocustDifficulty: 20
   logic: {fileID: 0}
 --- !u!1 &1970154199
 GameObject:
@@ -10632,7 +10635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f0d2156d0ae14ef88d402a904800fd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AntDifficulty: 0
   timeLeft: 6
   Antpositon: 0
   Antsilo1: {fileID: 603308671}

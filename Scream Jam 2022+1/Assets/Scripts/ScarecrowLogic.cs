@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScarecrowLogic : MonoBehaviour
 {
-    public int ScarecrowDifficulty = 5;
+    public static int ScarecrowDifficulty = 0;
     public float timeLeft = 5f;
     public int Scarecrowpositon = 0;
     public GameObject Scarecrowsilo1;
@@ -25,7 +25,7 @@ public class ScarecrowLogic : MonoBehaviour
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
-
+        ScarecrowDifficulty = 0;
     }
 
     void Clearpos()

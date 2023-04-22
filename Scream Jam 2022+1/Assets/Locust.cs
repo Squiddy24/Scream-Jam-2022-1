@@ -7,7 +7,7 @@ public class Locust : MonoBehaviour
     public ParticleSystem Locustparticals;
     public int emissionRate;
     public float timeLeft;
-    public int LocustDifficulty;
+    public static int LocustDifficulty;
     public static int dangerLVL;
     public LogicCode logic;
 
@@ -15,13 +15,17 @@ public class Locust : MonoBehaviour
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
-        emissionRate = 0;
+        emissionRate = 30;
         dangerLVL = 0;
+        LocustDifficulty = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        var emission = Locustparticals.emission;
+        emission.rateOverTime = emissionRate * dangerLVL;
+
         Debug.Log(dangerLVL);
         timeLeft -= 0.02f;
         if (timeLeft <= 0)
@@ -37,10 +41,7 @@ public class Locust : MonoBehaviour
                 }
                 else
                 {
-                    emissionRate += 50;
                     dangerLVL += 1;
-                    var emission = Locustparticals.emission;
-                    emission.rateOverTime = emissionRate;
                 }
                 
             }

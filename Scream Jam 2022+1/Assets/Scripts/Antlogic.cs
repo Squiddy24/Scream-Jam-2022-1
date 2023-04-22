@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Antlogic : MonoBehaviour
 {
-    public int AntDifficulty = 2;
+    public static int AntDifficulty = 5;
     public float timeLeft = 6f;
     public int Antpositon = 1;
     public GameObject Antsilo1;
@@ -26,7 +26,8 @@ public class Antlogic : MonoBehaviour
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
-    }
+        AntDifficulty = 5;
+}
     void ClearPos()
     {
         Antfield1.SetActive(false);
