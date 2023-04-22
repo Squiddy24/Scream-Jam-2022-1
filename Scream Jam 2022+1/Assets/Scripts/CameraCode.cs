@@ -17,10 +17,15 @@ public class CameraCode : MonoBehaviour
     public static bool CamOn;
     public float timeLeft = 5f;
     public GameObject static1;
-
     public int SprayPercentage = ButtonPressed.Percentage;
-
     public static int LastCam;
+
+    [Header("Sounds")]
+    public AudioSource Spraysound;
+
+   
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -141,6 +146,7 @@ public class CameraCode : MonoBehaviour
         if (SprayPercentage > 24)
         {
             antlogic.sprayed();
+            Spraysound.Play();
             if (Locust.dangerLVL > 0)
             {
                 Locust.dangerLVL = 0;
