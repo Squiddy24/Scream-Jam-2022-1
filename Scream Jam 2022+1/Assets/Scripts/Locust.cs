@@ -10,7 +10,8 @@ public class Locust : MonoBehaviour
     public static int LocustDifficulty = 0;
     public static int dangerLVL;
     public LogicCode logic;
-
+    public AudioSource locustsound;
+    public bool IsSoundPlaying;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,20 @@ public class Locust : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (CameraCode.CamOn == true && CameraCode.LastCam == 1)
+        {
+            if (IsSoundPlaying == false)
+            {
+                locustsound.volume = 0.2f * dangerLVL;
+                locustsound.Play();
+                IsSoundPlaying = true;
+            }
+        }
+        else
+        {
+            locustsound.Stop();
+            IsSoundPlaying = false;
+        }
         var emission = Locustparticals.emission;
         emission.rateOverTime = emissionRate * dangerLVL;
 
