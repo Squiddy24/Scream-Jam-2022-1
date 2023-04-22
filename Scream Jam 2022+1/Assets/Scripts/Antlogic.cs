@@ -23,6 +23,8 @@ public class Antlogic : MonoBehaviour
     public int Antmove;
     public bool Antattack;
     public GameObject static1;
+    [Header("Sounds")]
+    public AudioSource Staticsound;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
@@ -197,6 +199,10 @@ public class Antlogic : MonoBehaviour
     }
     public IEnumerator Static()
     {
+        if (CameraCode.CamOn == true)
+        {
+            Staticsound.Play();
+        }
         static1.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         static1.SetActive(false);

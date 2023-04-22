@@ -22,6 +22,8 @@ public class ScarecrowLogic : MonoBehaviour
     public GameObject Scarecrowsleep;
     public LogicCode logic;
     public GameObject static1;
+    [Header("Sounds")]
+    public AudioSource staticsound;
 
     void Start()
     {
@@ -173,6 +175,10 @@ public class ScarecrowLogic : MonoBehaviour
     }
     public IEnumerator Static()
     {
+        if (CameraCode.CamOn == true)
+        {
+            staticsound.Play();
+        }
         static1.SetActive(true);
         yield return new WaitForSeconds(0.1f);
         static1.SetActive(false);

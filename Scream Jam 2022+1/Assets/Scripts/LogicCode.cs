@@ -21,9 +21,6 @@ public class LogicCode : MonoBehaviour
     public GameObject office;
     public GameObject UI;
     public GameObject static1;
-
-    [Header("Sounds")]
-    public AudioSource ScarecrowLeaving;
     // Start is called before the first frame update
     void Start()
     {
@@ -81,10 +78,7 @@ public class LogicCode : MonoBehaviour
             UI.SetActive(false);
             StartCoroutine(Static());
             StartCoroutine(Death());
-        }
-        else
-        {
-            ScarecrowLeaving.Play();
+
         }
     }
     public void antjump()
