@@ -22,6 +22,7 @@ public class Antlogic : MonoBehaviour
     public LogicCode logic;
     public int Antmove;
     public bool Antattack;
+    public GameObject static1;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
@@ -69,7 +70,7 @@ public class Antlogic : MonoBehaviour
             int RandomNumber = Random.Range(0, 20);
             if (AntDifficulty >= RandomNumber)
             {
-                
+                StartCoroutine(Static());
                 int RandomNumber3 = Random.Range(0, 2);
                 if (RandomNumber3 == 0 && Antattack == false)
                 {
@@ -178,6 +179,12 @@ public class Antlogic : MonoBehaviour
             Antpositon = 0;
             timeLeft = 0;
         }
+    }
+    public IEnumerator Static()
+    {
+        static1.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        static1.SetActive(false);
     }
 
 }

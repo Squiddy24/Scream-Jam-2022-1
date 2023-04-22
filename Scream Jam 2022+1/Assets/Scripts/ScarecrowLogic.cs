@@ -21,6 +21,7 @@ public class ScarecrowLogic : MonoBehaviour
     public GameObject Scarecrowcorn3;
     public GameObject Scarecrowsleep;
     public LogicCode logic;
+    public GameObject static1;
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
@@ -52,6 +53,7 @@ public class ScarecrowLogic : MonoBehaviour
             timeLeft = 5;
             if (ScarecrowDifficulty >= randomNumber)
             {
+                StartCoroutine(Static());
                 Scarecrowsleep.SetActive(false);
                 Scarecrowpositon = Scarecrowpositon + 1;
                 timeLeft = 5;
@@ -168,6 +170,12 @@ public class ScarecrowLogic : MonoBehaviour
             }
 
         }
+    }
+    public IEnumerator Static()
+    {
+        static1.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        static1.SetActive(false);
     }
 
 }

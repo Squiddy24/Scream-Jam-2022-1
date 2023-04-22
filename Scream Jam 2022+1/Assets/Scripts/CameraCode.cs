@@ -16,6 +16,7 @@ public class CameraCode : MonoBehaviour
     //public GameObject Static;
     public static bool CamOn;
     public float timeLeft = 5f;
+    public GameObject static1;
 
     public int SprayPercentage = ButtonPressed.Percentage;
 
@@ -96,6 +97,7 @@ public class CameraCode : MonoBehaviour
             transform.position = Room1.position;
             LastCam = 1;
             timeLeft = 5;
+            StartCoroutine(Static());
         }     
     }
     public void GoToRoom2()
@@ -105,6 +107,7 @@ public class CameraCode : MonoBehaviour
             transform.position = Room2.position;
             LastCam = 2;
             timeLeft = 5;
+            StartCoroutine(Static());
         }
     }
     public void GoToRoom3()
@@ -114,6 +117,7 @@ public class CameraCode : MonoBehaviour
             transform.position = Room3.position;
             LastCam = 3;
             timeLeft = 5;
+            StartCoroutine(Static());
         }
     }
     public void GoToRoom4()
@@ -123,6 +127,7 @@ public class CameraCode : MonoBehaviour
             transform.position = Room4.position;
             LastCam = 4;
             timeLeft = 5;
+            StartCoroutine(Static());
         }
     }
     public void LeaveCams()
@@ -149,6 +154,12 @@ public class CameraCode : MonoBehaviour
             // probably sould make a sound or smth
         }
 
+    }
+    public IEnumerator Static()
+    {
+        static1.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        static1.SetActive(false);
     }
 
 

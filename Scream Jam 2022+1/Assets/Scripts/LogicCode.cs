@@ -20,6 +20,7 @@ public class LogicCode : MonoBehaviour
     public GameObject locustscare;
     public GameObject office;
     public GameObject UI;
+    public GameObject static1;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +47,7 @@ public class LogicCode : MonoBehaviour
         cameraon = true;
         shake.enabled = false;
         shaketext.enabled = false;
+        StartCoroutine(Static());
     }
     public void LeaveCams()
     {
@@ -55,7 +57,7 @@ public class LogicCode : MonoBehaviour
         cameraon = false;
         shake.enabled = true;
         shaketext.enabled = true;
-
+        StartCoroutine(Static());
     }
     public void gameover()
     {
@@ -74,7 +76,9 @@ public class LogicCode : MonoBehaviour
             cameraon = false;
             Camera.LeaveCams();
             UI.SetActive(false);
+            StartCoroutine(Static());
             StartCoroutine(Death());
+
         }
     }
     public void antjump()
@@ -83,6 +87,7 @@ public class LogicCode : MonoBehaviour
         UI.SetActive(false);
         office.SetActive(false);
         yadead = true;
+        Camera.LeaveCams();
     }
     public void locustsjump()
     {
@@ -98,6 +103,18 @@ public class LogicCode : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Dead");
     }
+    public IEnumerator Static()
+    {
+        static1.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        static1.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+        if (yadead == true)
+        {
+            StartCoroutine(Static());
+        }
+    }
+    
 
 
 }
