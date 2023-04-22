@@ -19,7 +19,7 @@ public class RestartGame : MonoBehaviour
 
     public IEnumerator HomeScreem()
     {
-        yield return new WaitForSeconds(11);
+        yield return new WaitForSeconds(3);
         SceneManager.LoadScene("Title Screen");
     }
 
