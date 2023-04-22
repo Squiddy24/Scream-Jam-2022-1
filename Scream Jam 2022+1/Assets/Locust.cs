@@ -15,6 +15,8 @@ public class Locust : MonoBehaviour
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
+        emissionRate = 0;
+        dangerLVL = 0;
     }
 
     // Update is called once per frame
