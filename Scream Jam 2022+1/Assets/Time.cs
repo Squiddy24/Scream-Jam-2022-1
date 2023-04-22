@@ -31,7 +31,7 @@ public class Time : MonoBehaviour
         //Hour 1
         if (hour == 1 && hour1triggerd == false)
         {
-            Antlogic.AntDifficulty = 6;
+            Antlogic.AntDifficulty = 5;
             Locust.LocustDifficulty = 3;
             ScarecrowLogic.ScarecrowDifficulty = 0;
             hour1triggerd = true;
@@ -41,7 +41,7 @@ public class Time : MonoBehaviour
         if (hour == 2 && hour2triggerd == false)
         {
             Antlogic.AntDifficulty = 7;
-            Locust.LocustDifficulty = 5;
+            Locust.LocustDifficulty = 4;
             ScarecrowLogic.ScarecrowDifficulty = 1;
             hour2triggerd = true;
         }
@@ -49,18 +49,18 @@ public class Time : MonoBehaviour
         //Hour 3
         if (hour == 3 && hour3triggerd == false)
         {
-            Antlogic.AntDifficulty = 9;
-            Locust.LocustDifficulty = 6;
-            ScarecrowLogic.ScarecrowDifficulty = 5;
+            Antlogic.AntDifficulty = 8;
+            Locust.LocustDifficulty = 5;
+            ScarecrowLogic.ScarecrowDifficulty = 3;
             hour3triggerd = true;
         }
 
         //Hour 4
         if (hour == 4 && hour4triggerd == false)
         {
-            Antlogic.AntDifficulty = 6;
-            Locust.LocustDifficulty = 9;
-            ScarecrowLogic.ScarecrowDifficulty = 7;
+            Antlogic.AntDifficulty = 10;
+            Locust.LocustDifficulty = 7;
+            ScarecrowLogic.ScarecrowDifficulty = 5;
             hour4triggerd = true;
         }
 
@@ -68,8 +68,8 @@ public class Time : MonoBehaviour
         if (hour == 5 && hour5triggerd == false)
         {
             Antlogic.AntDifficulty = 13;
-            Locust.LocustDifficulty = 12;
-            ScarecrowLogic.ScarecrowDifficulty = 10;
+            Locust.LocustDifficulty = 9;
+            ScarecrowLogic.ScarecrowDifficulty = 8;
             hour5triggerd = true;
         }
     }
