@@ -14,6 +14,7 @@ public class Time : MonoBehaviour
     public bool hour3triggerd = false;
     public bool hour4triggerd = false;
     public bool hour5triggerd = false;
+    public AudioSource audio;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +54,7 @@ public class Time : MonoBehaviour
             Locust.LocustDifficulty = 5;
             ScarecrowLogic.ScarecrowDifficulty = 3;
             hour3triggerd = true;
+            audio.Play();
         }
 
         //Hour 4
@@ -71,6 +73,7 @@ public class Time : MonoBehaviour
             Locust.LocustDifficulty = 9;
             ScarecrowLogic.ScarecrowDifficulty = 8;
             hour5triggerd = true;
+            audio.Play();
         }
     }
 
