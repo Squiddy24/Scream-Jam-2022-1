@@ -18,6 +18,10 @@ public class Time : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Antlogic.AntDifficulty = 3;
+        Locust.LocustDifficulty = 0;
+        ScarecrowLogic.ScarecrowDifficulty = 0;
+
         StartCoroutine(TimePassing());
     }
 

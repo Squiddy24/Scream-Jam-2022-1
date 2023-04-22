@@ -6,7 +6,7 @@ public class Antlogic : MonoBehaviour
 {
     public static int AntDifficulty = 5;
     public float timeLeft = 6f;
-    public int Antpositon = 1;
+    public int Antpositon = 0;
     public GameObject Antsilo1;
     public GameObject Antsilo2;
     public GameObject Antsilo3;
@@ -26,7 +26,6 @@ public class Antlogic : MonoBehaviour
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicCode>();
-        AntDifficulty = 5;
 }
     void ClearPos()
     {
